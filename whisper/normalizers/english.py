@@ -512,6 +512,60 @@ class EnglishTextNormalizer:
             r"'s gone\b": " has gone",
             r"'d done\b": " had done",  # "'s done" is ambiguous
             r"'s got\b": " has got",
+
+            # New past participles to test
+            r"'d been\b": " had been",
+            r"'s been\b": " has been",
+            r"'d gone\b": " had gone",
+            r"'s gone\b": " has gone",
+            r"'d done\b": " had done",
+            r"'s got\b": " has got",
+            r"'d seen\b": " had seen",
+            r"'s seen\b": " has seen",
+            r"'d taken\b": " had taken",
+            r"'s taken\b": " has taken",
+            r"'d written\b": " had written",
+            r"'s written\b": " has written",
+            r"'d eaten\b": " had eaten",
+            r"'s eaten\b": " has eaten",
+            r"'d spoken\b": " had spoken",
+            r"'s spoken\b": " has spoken",
+            r"'d given\b": " had given",
+            r"'s given\b": " has given",
+            r"'d made\b": " had made",
+            r"'s made\b": " has made",
+            r"'d known\b": " had known",
+            r"'s known\b": " has known",
+            r"'d come\b": " had come",
+            r"'s come\b": " has come",
+            r"'d found\b": " had found",
+            r"'s found\b": " has found",
+
+            # Irregular verbs
+            r"'d brought\b": " had brought",
+            r"'s brought\b": " has brought",
+            r"'d caught\b": " had caught",
+            r"'s caught\b": " has caught",
+            r"'d bought\b": " had bought",
+            r"'s bought\b": " has bought",
+            r"'d left\b": " had left",
+            r"'s left\b": " has left",
+            r"'d run\b": " had run",
+            r"'s run\b": " has run",
+            r"'d begun\b": " had begun",
+            r"'s begun\b": " has begun",
+            r"'d kept\b": " had kept",
+            r"'s kept\b": " has kept",
+            r"'d felt\b": " had felt",
+            r"'s felt\b": " has felt",
+            r"'d held\b": " had held",
+            r"'s held\b": " has held",
+            r"'d worn\b": " had worn",
+            r"'s worn\b": " has worn",
+            r"'d stood\b": " had stood",
+            r"'s stood\b": " has stood",
+
+
             # general contractions
             r"n't\b": " not",
             r"'re\b": " are",
@@ -522,10 +576,7 @@ class EnglishTextNormalizer:
             r"'ve\b": " have",
             r"'m\b": " am",
         }
-        # NOTE: I think the numbers and spellings won't have much room for change. 
-        # We can definitely do the past participles and remove clearly ambiguous cases
-        # Remove some contractions
-        # Try to think of some more additional rules? Ask GPT for help
+        # NOTE: I think the numbers and spellings won't have much room for change. Focus here. 
 
         self.standardize_numbers = EnglishNumberNormalizer()
         self.standardize_spellings = EnglishSpellingNormalizer()
