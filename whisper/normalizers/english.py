@@ -505,7 +505,6 @@ class EnglishTextNormalizer:
             r"\bsr\b": "senior ",
             r"\besq\b": "esquire ",
             # prefect tenses, ideally it should be any past participles, but it's harder..
-            # NOTE: "It's harder" -> fix it ourselves
             r"'d been\b": " had been",
             r"'s been\b": " has been",
             r"'d gone\b": " had gone",
@@ -513,7 +512,7 @@ class EnglishTextNormalizer:
             r"'d done\b": " had done",  # "'s done" is ambiguous
             r"'s got\b": " has got",
 
-            # New past participles to test
+            # NOTE: NEW past participles
             r"'d been\b": " had been",
             r"'s been\b": " has been",
             r"'d gone\b": " had gone",
@@ -575,6 +574,43 @@ class EnglishTextNormalizer:
             r"'t\b": " not",
             r"'ve\b": " have",
             r"'m\b": " am",
+
+            # NOTE: New common contractions
+            r"y'all\b": " you all",
+            r"let's\b": " let us",
+            r"c'mon\b": " come on",
+            r"gimme\b": " give me",
+            r"gonna\b": " going to",
+            r"gotta\b": " got to",
+            r"wanna\b": " want to",
+            r"outta\b": " out of",
+            r"sorta\b": " sort of",
+            r"kinda\b": " kind of",
+            r"hafta\b": " have to",
+            r"oughta\b": " ought to",
+            r"shoulda\b": " should have",
+            r"coulda\b": " could have",
+            r"woulda\b": " would have",
+            r"'cause\b": " because",
+            r"who're\b": " who are",
+            r"where're\b": " where are",
+            r"what're\b": " what are",
+            r"when're\b": " when are",
+            r"how're\b": " how are",
+            r"there're\b": " there are",
+            r"who'd\b": " who would",
+            r"where'd\b": " where did",
+            r"what'd\b": " what did",
+            r"when'd\b": " when did",
+            r"how'd\b": " how did",
+            r"there'd\b": " there would",
+            r"who'll\b": " who will",
+            r"where'll\b": " where will",
+            r"what'll\b": " what will",
+            r"when'll\b": " when will",
+            r"how'll\b": " how will",
+            r"there'll\b": " there will",
+
         }
         # NOTE: I think the numbers and spellings won't have much room for change. Focus here. 
 
