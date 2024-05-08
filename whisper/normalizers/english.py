@@ -515,7 +515,7 @@ class EnglishTextNormalizer:
             # general contractions
             r"n't\b": " not",
             r"'re\b": " are",
-            # r"'s\b": " is",
+            r"'s\b": " is",
             r"'d\b": " would",
             r"'ll\b": " will",
             r"'t\b": " not",
