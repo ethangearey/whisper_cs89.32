@@ -630,6 +630,7 @@ class EnglishTextNormalizer:
 
         self.standardize_numbers = EnglishNumberNormalizer()
         self.standardize_spellings = EnglishSpellingNormalizer()
+        self.standardize_slang = EnglishSlangNormalizer()
 
     def __call__(self, s: str):
         s = s.lower()
@@ -648,6 +649,7 @@ class EnglishTextNormalizer:
 
         s = self.standardize_numbers(s)
         s = self.standardize_spellings(s)
+        s = self.standardize_slang(s)
 
         # now remove prefix/suffix symbols that are not preceded/followed by numbers
         s = re.sub(r"[.$¢€£]([^0-9])", r" \1", s)
