@@ -473,6 +473,11 @@ class EnglishSlangNormalizer:
         self.mapping = json.load(open(mapping_path))
 
     def __call__(self, s: str):
+        import os
+
+        print("Current working directory:", os.getcwd())
+        print("Script directory:", os.path.dirname(__file__))
+
         return " ".join(self.mapping.get(word, word) for word in s.split())
 
 
