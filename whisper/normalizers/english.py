@@ -469,15 +469,15 @@ class EnglishSlangNormalizer:
     """
 
     def __init__(self):
-        mapping_path = os.path.join(os.path.dirname(__file__), "slang.json")
-        self.mapping = json.load(open(mapping_path))
-
-    def __call__(self, s: str):
         import os
 
         print("Current working directory:", os.getcwd())
         print("Script directory:", os.path.dirname(__file__))
 
+        mapping_path = os.path.join(os.path.dirname(__file__), "slang.json")
+        self.mapping = json.load(open(mapping_path))
+
+    def __call__(self, s: str):
         return " ".join(self.mapping.get(word, word) for word in s.split())
 
 
